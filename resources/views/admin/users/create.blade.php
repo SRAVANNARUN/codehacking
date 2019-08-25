@@ -6,7 +6,7 @@
 @section('content')
 
 
-    <h1>Create users</h1>
+    <h1 class="text-center">Create users</h1>
     {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>'true']) !!}
 
     <div class="form-group">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Create Post', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
     </div>
 
     {!! Form::close() !!}

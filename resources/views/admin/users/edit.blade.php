@@ -6,7 +6,7 @@
 @section('content')
 
 
-    <h1>Edit users</h1>
+    <h1 class="text-center">Edit user</h1>
     <div class="row">
     <div class="col-sm-3">
         <img width="200" height="200" src="{{$user->photo ? $user->photo->file :'http://placehold.it/400x400'}}" alt="" class="img-circle">
@@ -47,10 +47,18 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Update', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Update User', ['class'=>'btn btn-primary col-sm-2']) !!}
     </div>
 
     {!! Form::close() !!}
+
+        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy',$user->id]]) !!}
+
+        <div class="form-group">
+            {!! Form::submit('Delete User', ['class'=>'btn btn-danger pull-right col-sm-2']) !!}
+        </div>
+
+        {!! Form::close() !!}
 
     </div>
     </div>

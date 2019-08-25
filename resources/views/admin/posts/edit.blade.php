@@ -6,7 +6,7 @@
 @section('content')
 
 
-    <h1>Admin Post Edit</h1>
+    <h1 class="text-center">Edit post</h1>
 
 
 

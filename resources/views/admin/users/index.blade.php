@@ -4,8 +4,12 @@
 
 
 @section('content')
+    @if(Session::has('delete_user'))
 
-    <h3>All users</h3>
+        <p class="bg-danger">{{session('delete_user')}}</p>
+
+    @endif
+    <h1 class="text-center">All users</h1>
 
     <table class="table">
         <thead>
